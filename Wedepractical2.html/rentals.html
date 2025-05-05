@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driveking Rentals</title>
+  <style>
+    body {
+      font-family: Arial, light blue;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .vehicle-selector {
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .vehicle-info {
+      background: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .vehicle-info h2 {
+      margin-top: 0;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+    <link rel="stylesheet" href="style.css">
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="enquiry.html">enquiry</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="reference.html">referance </a></li>
+            <li><a href="rentals.html">rentals </a><li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+  <h1 style="font-size: 60px;">Driveking rentals</h1>
+
+  <div class="vehicle-selector">
+    <label for="vehicleSelect">Choose a vehicle:</label>
+    <select id="vehicleSelect" onchange="showVehicleInfo()">
+      <option value="">-- Select a Vehicle --</option>
+      <option value="sedan">Sedan</option>
+      <option value="suv">SUV</option>
+      <option value="convertible">Convertible</option>
+      <option value="truck">Truck</option>
+    </select>
+  </div>
+
+  <div id="vehicleInfo" class="vehicle-info" style="display: none;"></div>
+
+  <script>
+    const vehicleData = {
+      sedan: {
+        name: "Sedan",
+        description: "A comfortable and fuel-efficient choice for city driving.",
+        price: "R264/day"
+      },
+      suv: {
+        name: "SUV",
+        description: "Spacious and powerful—perfect for family trips or rough terrain.",
+        price: "R300/day"
+      },
+      convertible: {
+        name: "Hatchback",
+        description: "Enjoy the sunshine and fresh air with our premium convertibles.",
+        price: "R260/day"
+      },
+      truck: {
+        name: "Bakkie",
+        description: "Reliable and strong—ideal for moving or hauling equipment.",
+        price: "R360/day"
+      }
+    };
+
+    function showVehicleInfo() {
+      const select = document.getElementById('vehicleSelect');
+      const infoDiv = document.getElementById('vehicleInfo');
+      const selected = select.value;
+
+      if (vehicleData[selected]) {
+        const vehicle = vehicleData[selected];
+        infoDiv.innerHTML = `
+          <h2>${vehicle.name}</h2>
+          <p>${vehicle.description}</p>
+          <strong>Price: ${vehicle.price}</strong>
+        `;
+        infoDiv.style.display = 'block';
+      } else {
+        infoDiv.style.display = 'none';
+      }
+    }
+  </script>
+
+
+
+
+</body>
+</html>

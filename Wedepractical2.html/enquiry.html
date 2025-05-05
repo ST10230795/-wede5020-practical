@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enquiry Page</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 style="font-size:60px;text-align: center;">Enquiry Form</h1>
+
+  <nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="enquiry.html">enquiry</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">services</a></li>
+        <li><a href="reference.html">referance </a></li>
+        <li><a href="rentals.html">rentals </a><li>
+    </ul>
+</nav>
+
+
+  <p>Please fill out the form below for any enquiries:</p>
+
+  <form action="/submit-enquiry" method="post">
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone"><br><br>
+
+    <label for="enquiryType">Type of Enquiry:</label><br>
+    <select id="enquiryType" name="enquiryType">
+      <option value="general">General</option>
+      <option value="product">Product Information</option>
+      <option value="support">Customer Support</option>
+      <option value="feedback">Feedback</option>
+    </select><br><br>
+
+    <label for="message">Your Message:</label><br>
+    <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+    <input type="submit" value="Submit Enquiry">
+  </form>
+
+  
+  <p>Or you can contact us at: enquiry@example.com</p>
+
+  <br>
+    <!-- Footer -->
+    <footer>
+       <p>&copy; 2025 Driveking Rentals. All rights reserved.</p>
+       <p>Email: support@driveking.com | Phone: +1 234 567 890</p>
+   </footer>
+</body>
+</html>
+</body>
+</html>
